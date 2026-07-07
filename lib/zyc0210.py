@@ -56,6 +56,11 @@ ClampServo = Servo(22)      # servo moteur de la pince
 ArmServo = Servo(21)        # servo moteur du bras
 TurnableServo = Servo(2)    # servo moteur de la base
 
+# Les angles utilises ci-dessous (initServo, takeObject) correspondent au
+# montage d'origine et peuvent ne pas convenir a votre assemblage. Comme
+# pour BlackLine, chacun peut faire son propre etalonnage a l'aide de
+# exemples/03_test_servomoteurs.py puis reporter les valeurs trouvees ici.
+
 
 ## ----------------------- Bras et pince -----------------------
 

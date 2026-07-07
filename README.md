@@ -162,6 +162,15 @@ Le kit inclut 3 servomoteurs (MG90S) qui forment le bras robotisé :
 | Bras        | GPIO 21          |
 | Base        | GPIO 2           |
 
+> Les angles utilisés dans `lib/zyc0210.py` (position de repos, ouverture/
+> fermeture de la pince, levée du bras) correspondent au montage d'origine
+> et peuvent ne pas convenir tel quel à votre propre assemblage. Comme pour
+> le seuil du suivi de ligne, chacun peut faire son propre étalonnage à
+> l'aide du script [`exemples/03_test_servomoteurs.py`](exemples/03_test_servomoteurs.py) :
+> testez différents angles jusqu'à trouver les positions qui conviennent à
+> votre bras et votre pince, puis reportez ces valeurs dans
+> `lib/zyc0210.py`.
+
 ## Récapitulatif du brochage
 
 | Fonction                | Broche(s) ESP32 |
