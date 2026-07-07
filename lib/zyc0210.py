@@ -1,5 +1,5 @@
 """
-Librairie haut niveau pour le kit de voiture robotique ZYC0210 (ESP32 + MicroPython).
+Librairie pour le kit de voiture robotique ZYC0210 (ESP32 + MicroPython).
 
 Regroupe :
     - le pilotage des 4 moteurs DC (avancer, reculer, tourner, arreter) ;
