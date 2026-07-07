@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Controle de la voiture</title>
+<style>
+  body {
+    font-family: sans-serif;
+    background: #111;
+    color: #eee;
+    text-align: center;
+    margin: 0;
+    padding: 24px 12px;
+  }
+  h1 { font-size: 1.3em; margin-bottom: 24px; }
+  .pad {
+    display: grid;
+    grid-template-columns: 80px 80px 80px;
+    grid-template-rows: 80px 80px 80px;
+    gap: 10px;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  button {
+    font-size: 1.5em;
+    border-radius: 12px;
+    border: none;
+    background: #2d6cdf;
+    color: white;
+    touch-action: manipulation;
+  }
+  button:active { background: #1c4fa8; }
+  #stop { background: #d92d2d; }
+  #stop:active { background: #a81c1c; }
+  #etat { margin-top: 20px; opacity: 0.7; font-size: 0.9em; }
+</style>
+</head>
+<body>
+  <h1>Controle de la voiture robot</h1>
+  <div class="pad">
+    <div></div>
+    <button id="avancer">&#8593;</button>
+    <div></div>
+    <button id="gauche">&#8592;</button>
+    <button id="stop">&#9632;</button>
+    <button id="droite">&#8594;</button>
+    <div></div>
+    <button id="reculer">&#8595;</button>
+    <div></div>
+  </div>
+  <p id="etat">Pret</p>
+
+<script>
+  function envoyer(chemin) {
+    document.getElementById("etat").textContent = "Commande : " + chemin;
+    fetch(chemin).catch(function () {
+      document.getElementById("etat").textContent = "Erreur de connexion";
+    });
+  }
+
+  document.getElementById("avancer").addEventListener("click", function () { envoyer("/avancer"); });
+  document.getElementById("reculer").addEventListener("click", function () { envoyer("/reculer"); });
+  document.getElementById("gauche").addEventListener("click", function () { envoyer("/gauche"); });
+  document.getElementById("droite").addEventListener("click", function () { envoyer("/droite"); });
+  document.getElementById("stop").addEventListener("click", function () { envoyer("/stop"); });
+</script>
+</body>
+</html>
