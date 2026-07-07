@@ -1,8 +1,8 @@
-# Kit de voiture robotique ZYC0210 — MicroPython
+# Kit de voiture robotique ZYC0210 de TSCINBUNY — MicroPython
 
 Guide complet en français et librairie MicroPython libres pour programmer et
 prendre le contrôle total du kit de voiture robotique **ZYC0210** (base
-**ESP32**) : moteurs DC, capteur ultrason, module suiveur de ligne
+**ESP32**) de TSCINBUNY : moteurs DC, capteur ultrason, module suiveur de ligne
 infrarouge, bras robotisé à 3 servomoteurs, et contrôle à distance depuis un
 navigateur web.
 
